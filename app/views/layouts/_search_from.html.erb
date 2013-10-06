@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <div class="search">
+    <%= form_tag({controller: "hosts", action: "search"}, :method => 'get' ) do %>
+      <div class="col check_in">
+         <%= text_field_tag(:start_date, params[:start_date],:placeholder => "Check In") %>
+      </div>
+      <div class="col check_out">
+        <%= text_field_tag(:end_date, params[:end_date],:placeholder => "Check Out") %>
+      </div>
+      <div class="col guests">
+        <%= guest_select(params[:guests]) %>
+      </div>
+      <div class="col submit">
+        <input class="btn btn-block btn-homestay" id="search-submit" name="commit" type="submit" value="Search"></div>
+    <% end %>
+  </div>
+</div>

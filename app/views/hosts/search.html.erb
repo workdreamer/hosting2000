@@ -1,0 +1,18 @@
+<div id="search_result">
+  <% @hosts.each do |host| %>
+  <ul class="<%= cycle('even', '') %>">
+    <h3><%= host.ref %>: <%= host.name %></h3>
+    <h4><%= host.address %></h4>
+    <% host.rooms.all_bookings.fields(params[:start_date], params[:end_date])
+                 .booking_date_free_on(params[:start_date], params[:end_date], params[:guests]).each do |room| %>
+        <% booked = room.booked.blank? ? 0 : room.booked %>
+        <li><%= room.ref %> is available ( <%= booked %> booked, <%= room.capacity - booked %> free, out of <%= room.capacity %> total)</li>
+    <% end %>
+  </ul>
+  <% end %>
+
+</div>
+<div style="height:10px"></div>
+<div class="digg_pagination">
+  <%= will_paginate @hosts %>
+</div>

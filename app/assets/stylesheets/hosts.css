@@ -1,0 +1,26 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+#search_result{
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+ul{
+    padding: 10px;
+    border: 1px solid #81C139 ;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px #CCC;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul.even{
+    background: #81C139;
+    border: 0px;
+}

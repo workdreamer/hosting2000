@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hosting2000</title>
+  <%= stylesheet_link_tag "_application_homestay", "application", "pagination", "datepicker" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<h1>Hosting 2000</h1>
+<body>
+<%= render :partial => 'layouts/search_from' %>
+
+<%= yield %>
+
+</body>
+</html>

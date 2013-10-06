@@ -1,0 +1,20 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+html, body {height: 100%;}
+body {
+    font: 13px MyriadWebProRegular, Helvetica, sans-serif;
+    margin:0;
+    background: url(http://d2zz6okffbvlwu.cloudfront.net/production/assets/v1/graphic-background-209d150584b1a9a0b7add687ab6b2b6a.jpg);
+}
+h1{
+    color: white;
+}
+h3, h4{
+    margin: 5px 0;
+}
+
